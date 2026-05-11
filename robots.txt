@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Empêcher l'indexation des fichiers de configuration si présents
+Disallow: /README.md
+Disallow: /LICENSE
+
+# Lien vers le sitemap
+Sitemap: https://ecoconso-comparatif.fr/sitemap.xml

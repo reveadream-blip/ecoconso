@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "EcoConso Comparatif",
+  "url": "https://ecoconso-comparatif.fr",
+  "logo": "https://ecoconso-comparatif.fr/favicon.png"
+}
+</script>
+<link rel="icon" type="image/png" sizes="96x96" href="https://ecoconso-comparatif.fr/favicon.png">
+<link rel="apple-touch-icon" href="https://ecoconso-comparatif.fr/favicon.png">
+<link rel="shortcut icon" type="image/png" href="https://ecoconso-comparatif.fr/favicon.png">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39YYDB702J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-39YYDB702J');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConso Comparatif | Simulateur d'économie d'énergie en 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+<div class="bg-slate-900 text-white py-2 px-4 text-center">
+    <p class="text-[11px] font-bold uppercase tracking-widest">
+        Envie d'aller plus loin que les économies ? 
+        <a href="https://devenirautonome.fr" target="_blank" class="text-emerald-400 hover:text-white underline ml-2 transition">
+            Découvrez notre Manuel d'Autonomie Totale →
+        </a>
+    </p>
+</div>
+
+<body class="bg-slate-50 font-sans text-gray-900">
+
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-20 items-center">
+            
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.location.href='index.html'">
+                
+                <div class="w-12 h-12 flex items-center justify-center">
+                    <img src="logo-ecoconso.png" 
+                         alt="Logo EcoConso" 
+                         class="w-full h-full object-contain">
+                </div>
+
+                <span class="text-2xl font-black tracking-tighter italic text-slate-800 uppercase">
+                    EcoConso<span class="text-emerald-600">-Comparatif</span>
+                </span>
+            </div>
+               <div class="hidden md:flex items-center space-x-8 font-black uppercase text-sm tracking-wider">
+<a href="astuces-economie-energie.html" class="text-slate-700 hover:text-emerald-600 transition">💡 Astuces</a>
+                <a href="comparatif-solaire.html" class="text-slate-700 hover:text-emerald-600 transition">☀️ Solaire</a>
+                <a href="comparatif-chauffage.html" class="text-slate-700 hover:text-orange-600 transition">🔥 Chauffage</a>
+                <a href="comparatif-eau.html" class="text-slate-700 hover:text-blue-600 transition">💧 Eau</a>
+                <a href="simulateur.html" class="text-slate-700 hover:text-emerald-600 transition font-black uppercase text-sm">📊 Réduire votre facture!</a>
+                <a href="reseau-autonomie-crise.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-xs transition shadow-lg hover:bg-emerald-700 font-black uppercase">🌐 Réseau</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <header class="pt-40 pb-16 bg-slate-900 text-center">
+        <h1 class="text-4xl md:text-5xl font-black text-white uppercase italic">Simulateur <span class="text-emerald-500">Solaire</span> 2026</h1>
+        <p class="text-slate-400 mt-4 max-w-2xl mx-auto px-4 italic">Analysez votre consommation d'énergie et réduisez votre facture d'électricité. Pour aller plus loin, consultez le <a href="guide-autoconsommation.html" class="text-emerald-400 underline font-semibold">guide autoconsommation</a> ou le <a href="comparatif-solaire.html" class="text-emerald-400 underline font-semibold">comparatif solaire 2026</a>.</p>
+    </header>
+
+    <section class="py-16">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+                
+                <div class="p-8 md:p-12" id="step-1">
+                    <h2 class="text-xl font-black uppercase mb-8 border-l-4 border-emerald-500 pl-4 text-slate-800 italic">Configuration du foyer</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 tracking-widest">Facture électricité mensuelle (€)</label>
+                            <input type="number" id="bill" placeholder="Ex: 120" class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-emerald-500 outline-none transition text-lg font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 tracking-widest">Zone géographique</label>
+                            <select id="region" class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-emerald-500 outline-none transition font-bold italic">
+                                <option value="1.2">Sud (Ensoleillement maximum)</option>
+                                <option value="1.0" selected>Centre / Ouest (Standard)</option>
+                                <option value="0.8">Nord / Est (Modéré)</option>
+                            </select>
+                        </div>
+                        <button onclick="runSimulation()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-5 rounded-xl uppercase tracking-widest shadow-xl transition-all hover:scale-[1.01] mt-4">
+                            Calculer ma recommandation
+                        </button>
+                    </div>
+                </div>
+
+                <div id="results" class="hidden">
+                    <div class="p-8 md:p-12 bg-slate-900 text-white text-center">
+                        <span class="text-emerald-400 font-bold uppercase text-[10px] tracking-[0.2em]">Puissance Idéale</span>
+                        
+                        <div class="flex items-center justify-center gap-3 mt-2">
+                            <div class="text-6xl font-black italic"><span id="power">0</span> Wc</div>
+                            <div class="group relative">
+                                <i class="fas fa-question-circle text-slate-600 hover:text-emerald-400 cursor-help text-xl transition"></i>
+                                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-4 bg-white text-slate-800 text-[11px] rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 border border-slate-200 leading-relaxed text-left font-normal">
+                                    <p class="font-bold text-emerald-600 mb-1 uppercase tracking-tighter italic underline">Le Watt-crête (Wc) :</p>
+                                    Unité de mesure de la puissance maximale. Pour <span class="font-bold text-emerald-600" id="wc-info">0</span> Wc, vous produirez environ <span class="font-bold text-emerald-600" id="prod-info">0</span> kWh par an.
+                                    <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-white"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mt-10">
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/10 italic">
+                                <div class="text-emerald-400 font-bold text-3xl"><span id="saving">0</span>€</div>
+                                <div class="text-[9px] uppercase text-slate-500 font-black tracking-widest">Économie / an</div>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/10 italic">
+                                <div class="text-emerald-400 font-bold text-3xl"><span id="panels">0</span></div>
+                                <div class="text-[9px] uppercase text-slate-500 font-black tracking-widest">Panneaux (400W)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-12 bg-white">
+                        <h3 class="text-slate-900 font-black uppercase text-xs mb-8 flex items-center justify-center gap-3 italic text-center">
+                            <span class="hidden md:block w-12 h-[2px] bg-slate-200"></span>
+                            Acheter votre matériel au meilleur prix
+                            <span class="hidden md:block w-12 h-[2px] bg-slate-200"></span>
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                            
+                            <a href="https://amzn.to/4bqtiCK" target=_blank" rel="nofollow" class="p-5 bg-emerald-50 rounded-2xl border-2 border-emerald-200 hover:border-emerald-500 hover:shadow-lg transition-all group block">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-xl mb-3 group-hover:bg-emerald-600 group-hover:text-white transition"><i class="fas fa-box"></i></div>
+                                <h5 class="font-black text-slate-900 text-[10px] uppercase text-emerald-700">Kit Complet + Batterie <i class="fas fa-shopping-cart ml-1 opacity-50"></i></h5>
+                                <p class="text-[10px] text-slate-600 italic mt-1 leading-tight font-medium">L'autonomie maximale tout-en-un.</p>
+                            </a>
+
+                            <a href="https://amzn.to/4aTYXMX" target="_blank" rel="nofollow" class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-500 hover:shadow-lg transition-all group block">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-xl mb-3 group-hover:bg-emerald-600 group-hover:text-white transition"><i class="fas fa-solar-panel"></i></div>
+                                <h5 class="font-black text-slate-900 text-[10px] uppercase">Panneaux Seuls <i class="fas fa-shopping-cart ml-1 opacity-30"></i></h5>
+                                <p class="text-[10px] text-slate-500 italic mt-1 leading-tight">Surface : <span id="surface" class="font-bold">0</span> m².</p>
+                            </a>
+
+                            <a href="https://amzn.to/4lgvro3" target="_blank" rel="nofollow" class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 hover:shadow-lg transition-all group block">
+                                <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-3 group-hover:bg-blue-600 group-hover:text-white transition"><i class="fas fa-microchip"></i></div>
+                                <h5 class="font-black text-slate-900 text-[10px] uppercase">Onduleurs <i class="fas fa-shopping-cart ml-1 opacity-30"></i></h5>
+                                <p class="text-[10px] text-slate-500 italic mt-1 leading-tight">Conversion 230V immédiate.</p>
+                            </a>
+
+                            <a href="https://amzn.to/4rUE8qI" target="_blank" rel="nofollow" class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-800 hover:shadow-lg transition-all group block">
+                                <div class="w-10 h-10 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center text-xl mb-3 group-hover:bg-slate-800 group-hover:text-white transition"><i class="fas fa-tools"></i></div>
+                                <h5 class="font-black text-slate-900 text-[10px] uppercase">Supports <i class="fas fa-shopping-cart ml-1 opacity-30"></i></h5>
+                                <p class="text-[10px] text-slate-500 italic mt-1 leading-tight">Fixations Toit, Sol ou Mur.</p>
+                            </a>
+
+                            <a href="https://amzn.to/4cwzV7D" target="_blank" rel="nofollow" class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-red-500 hover:shadow-lg transition-all group block">
+                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-3 group-hover:bg-red-600 group-hover:text-white transition"><i class="fas fa-plug"></i></div>
+                                <h5 class="font-black text-slate-900 text-[10px] uppercase">Câbles & MC4 <i class="fas fa-shopping-cart ml-1 opacity-30"></i></h5>
+                                <p class="text-[10px] text-slate-500 italic mt-1 leading-tight">Connectique haute sécurité.</p>
+                            </a>
+
+                            <a href="https://amzn.to/3MYGndl" target="_blank" rel="nofollow" class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-500 hover:shadow-lg transition-all group block">
+                                <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl mb-3 group-hover:bg-orange-600 group-hover:text-white transition"><i class="fas fa-wifi"></i></div>
+                                <h5 class="font-black text-slate-900 text-[10px] uppercase">Monitoring <i class="fas fa-shopping-cart ml-1 opacity-30"></i></h5>
+                                <p class="text-[10px] text-slate-500 italic mt-1 leading-tight">Suivi Wifi via application mobile.</p>
+                            </a>
+                        </div>
+
+                        <div class="text-center pt-6 border-t border-slate-100">
+                            <button onclick="location.reload()" class="text-slate-400 hover:text-emerald-600 font-black uppercase text-[9px] tracking-widest transition flex items-center justify-center mx-auto gap-2">
+                                <i class="fas fa-redo"></i> Relancer une simulation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section class="py-20 bg-emerald-50 border-y border-emerald-100 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-black text-slate-800 uppercase italic mb-4">L'économie ne vous suffit plus ?</h3>
+        <p class="text-slate-600 mb-8 italic">Passez de la réduction de facture à l'indépendance radicale. Apprenez à vivre hors-réseau, cultiver votre autonomie et construire votre propre sanctuaire.</p>
+        <a href="https://devenirautonome.fr" target="_blank" 
+           class="inline-block bg-slate-900 text-white px-8 py-4 font-black uppercase tracking-widest hover:bg-emerald-600 transition shadow-xl">
+            Visiter DevenirAutonome.fr
+        </a>
+    </div>
+</section>
+    <footer class="bg-slate-900 text-gray-600 py-10 text-center text-[10px] uppercase tracking-widest italic border-t border-white/5">
+        © 2026 EcoConso<span class="text-emerald-600">-Comparatif</span> — Expertise en autoconsommation
+    </footer>
+
+    <script>
+        function runSimulation() {
+            const bill = document.getElementById('bill').value;
+            const region = document.getElementById('region').value;
+
+            if (bill > 0) {
+                let powerNeeded = (bill * 8.5) * (1 / region);
+                let finalPower = Math.round(powerNeeded / 100) * 100;
+                let nbPanels = Math.ceil(finalPower / 400);
+                let annualSaving = (bill * 12) * 0.30 * region;
+                let surface = nbPanels * 2;
+                let annualProd = finalPower * 1.3 * region;
+
+                document.getElementById('power').innerText = finalPower;
+                document.getElementById('saving').innerText = Math.round(annualSaving);
+                document.getElementById('panels').innerText = nbPanels;
+                document.getElementById('surface').innerText = surface;
+                
+                document.getElementById('wc-info').innerText = finalPower;
+                document.getElementById('prod-info').innerText = Math.round(annualProd);
+
+                document.getElementById('step-1').classList.add('hidden');
+                document.getElementById('results').classList.remove('hidden');
+                window.scrollTo({ top: 200, behavior: 'smooth' });
+            } else {
+                alert("Veuillez entrer votre facture mensuelle.");
+            }
+        }
+    </script>
+</body>
+</html>
