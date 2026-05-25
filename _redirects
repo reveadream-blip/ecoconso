@@ -1,6 +1,4 @@
-/actualites /actualites.html 200
-/actualites/ /actualites.html 200
-/actualites/salut-a-tous /actualites/salut-a-tous/ 301
-/actualites/salut-a-tous/ /actualites/salut-a-tous/index.html 200
+/actualites.html /actualites/ 301
+/actualites /actualites/ 301
 /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/ 301
 /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/ /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/index.html 200
