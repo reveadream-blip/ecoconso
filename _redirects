@@ -1,4 +1,5 @@
 /actualites.html /actualites/ 301
 /actualites /actualites/ 301
+/actualites/actualites/* /actualites/:splat 301
 /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/ 301
 /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/ /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/index.html 200
