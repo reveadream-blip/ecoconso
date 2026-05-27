@@ -1,5 +1,7 @@
 /actualites.html /actualites/ 301
 /actualites /actualites/ 301
 /actualites/actualites/* /actualites/:splat 301
+/actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite /actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite/ 301
+/actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite/ /actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite/index.html 200
 /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/ 301
 /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/ /actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite/index.html 200
